@@ -1,1 +1,1 @@
-alias hw=$(echo "hello world") 
+alias dl="cd ~/Downloads"
