@@ -43,7 +43,7 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
 # Save to disk (not to iCloud) by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool true
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
@@ -80,7 +80,6 @@ defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
 
 # Trackpad: map bottom right corner to right-click (requires restart!)
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
 defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
 defaults write NSGlobalDomain ContextMenuGesture -int 1
 
@@ -176,6 +175,12 @@ chflags nohidden ~/Library
 # Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 50
 
+# Autohide dock
+defaults write com.apple.Dock autohide -bool TRUE
+
+# Move dock to the left
+defaults write com.apple.Dock orientation -string left
+
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.15
 
@@ -206,6 +211,9 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom left screen corner → Desktop
 defaults write com.apple.dock wvous-bl-corner -int 4
 defaults write com.apple.dock wvous-bl-modifier -int 0
+
+# Restart dock to take affect 
+killall Dock
 
 ###############################################################################
 # Safari & WebKit                                                             #
