@@ -1,1 +1,1 @@
-export alias dl="cd ~/Downloads"
+alias dl="cd ~/Downloads"
