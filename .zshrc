@@ -43,7 +43,7 @@ fi
 if [ ! -f ~/Downloads/zsh/install.sh ]
 then
   mkdir -p ~/Downloads/zsh/
-  sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -P $HOME/Downloads/zsh/install.sh)"
+  sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -P $HOME/Downloads/zsh)"
 fi
 
 # Allow history search via up/down keys.
