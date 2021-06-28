@@ -40,10 +40,10 @@ else
     echo "Unknown architecture: ${arch_name}"
 fi
 
-if [ ! -f ~/Download/zsh/install.sh ]
+if [ ! -f ~/Downloads/zsh/install.sh ]
 then
-  mkdir -p ~/Download/zsh/
-  sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh ~/Download/zsh/)"
+  mkdir -p ~/Downloads/zsh/
+  sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh $HOME/Downloads/zsh/install.sh)"
 fi
 
 # Allow history search via up/down keys.
