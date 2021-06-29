@@ -32,6 +32,10 @@ else
   while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 fi
 
+# Auto update
+softwareupdate --schedule on
+softwareupdate -ia --verbose
+
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
