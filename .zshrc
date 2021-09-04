@@ -31,6 +31,11 @@ export PATH=$(echo $PATH | tr ':' '\n' | perl -lne 'chomp; print unless $k{$_}; 
 # Bash-style time output.
 export TIMEFMT=$'\nreal\t%*E\nuser\t%*U\nsys\t%*S'
 
+get_pw () {
+  security find-generic-password -ga "$1" -w
+}
+export MAC_OS="$(get_pw MAC_OS)"
+
 # Include alias file (if present) containing aliases for ssh, etc.
 if [ -f ~/.aliases ]
 then
