@@ -1,0 +1,31 @@
+tap "boltops-tools/software"
+tap "dapr/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+brew "docker"
+brew "dockutil"
+brew "git"
+brew "go"
+brew "goenv"
+brew "grep"
+brew "helm"
+brew "kubernetes-cli"
+brew "kubevela"
+brew "mas"
+brew "minikube"
+brew "pipenv"
+brew "pyenv"
+brew "ruby"
+brew "skaffold"
+brew "tfenv"
+brew "vault"
+brew "watch"
+brew "wget"
+brew "zsh-history-substring-search"
+brew "dapr/tap/dapr-cli", link: false
+cask "lastpass", args: { appdir: "/Applications" }
+cask "notion", args: { appdir: "/Applications" }
+cask "steam", args: { appdir: "/Applications" }
+cask "terraspace"
+cask "visual-studio-code", args: { appdir: "/Applications" }

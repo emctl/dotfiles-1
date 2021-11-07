@@ -98,6 +98,10 @@ function gsync() {
 # Tell homebrew to not autoupdate every single time I run it (just once a week).
 export HOMEBREW_AUTO_UPDATE_SECS=604800
 
+PWDBREW = dirname "$0"
+
+brew bundle --file=$PWDBREW/Brewfile
+
 # Super useful Docker container oneshots.
 # Usage: dockrun, or dockrun [centos7|fedora27|debian9|debian8|ubuntu1404|etc.]
 dockrun() {
@@ -149,3 +153,4 @@ source ~/Downloads/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ /opt/homebrew/bin/kubectl ]] && source <(kubectl completion zsh) # add autocomplete permanently to your zsh shell
